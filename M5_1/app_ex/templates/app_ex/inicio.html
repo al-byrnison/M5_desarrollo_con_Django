@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsividad individual</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      color: whitesmoke;
+      background-color: black;
+    }
+
+    h1,
+    h3 {
+      font-family: monospace;
+    }
+
+    .img img {
+      width: 100%;
+    }
+
+    .header {
+      text-align: center;
+    }
+
+    .header p {
+      justify-content: center;
+      text-align: justify;
+      padding: 1em;
+      height: 100%;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    }
+
+    .tag p {
+      background-color: aquamarine;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+      border-color: darkgray;
+      margin: 0;
+      padding: 0.5em;
+      color: black;
+      font-family: 'Courier New', Courier, monospace;
+      font-weight: 800;
+    }
+
+    /*Versión móvil (enfoque Mobile First)*/
+    [class*="col-"] {
+      width: 100%;
+      padding: 3px;
+
+    }
+
+    /* Versión ordenador*/
+    @media only screen and (min-width: 1080px) {
+      h1 {
+        font-size: 4em;
+      }
+
+      h3 {
+        font-size: 2em;
+      }
+
+      .header p {
+        font-size: 2em;
+        margin: 10px;
+      }
+
+      .col-1 {
+        width: 8.33%;
+      }
+
+      .col-2 {
+        width: 16.66%;
+      }
+
+      .col-3 {
+        width: 25%;
+      }
+
+      .col-4 {
+        width: 33.33%;
+      }
+
+      .col-5 {
+        width: 41.66%;
+      }
+
+      .col-6 {
+        width: 50%;
+      }
+
+      .col-7 {
+        width: 58.33%;
+      }
+
+      .col-8 {
+        width: 66.66%;
+      }
+
+      .col-9 {
+        width: 75%;
+      }
+
+      .col-10 {
+        width: 83.33%;
+      }
+
+      .col-11 {
+        width: 91.66%;
+      }
+
+      .col-12 {
+        width: 100%;
+      }
+
+      [class*="col-"] {
+        float: left;
+      }
+
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header row">
+    <div class="col-12">
+      <h1>Responsive with CSS</h1>
+    </div>
+    <div class="col-12">
+      <h3>Individual excercise</h3>
+    </div>
+    <div class="col-12">
+      <p>The purpose of this excercise is to understand the responsiveness of the web browser, whether viewed from a
+        mobile device or a computer.</p>
+      <p>{{texto}}</p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4">
+      <div class="col-12 ">
+        {% load static %}
+        <div class="img"><img src="{% static 'app_ex/img_01.jpg' %}" alt="img_01"></div>
+
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="col-12 ">
+        <div class="img"><img src="https://maimilu.com/filedata/public/eventimg/7-91d40.jpg" alt=""></div>
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="col-12 ">
+        <div class="img"><img src="https://maimilu.com/filedata/public/eventimg/7-91d40.jpg" alt=""></div>
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="col-12 ">
+        <div class="img"><img src="https://maimilu.com/filedata/public/eventimg/7-91d40.jpg" alt=""></div>
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="col-12 ">
+        <div class="img"><img src="https://maimilu.com/filedata/public/eventimg/7-91d40.jpg" alt=""></div>
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-4">
+      <div class="col-12 ">
+        <div class="img"><img src="https://maimilu.com/filedata/public/eventimg/7-91d40.jpg" alt=""></div>
+      </div>
+      <div class="tags row">
+        <div class="tag col-7">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-5">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-2">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-4">
+          <p>#tag</p>
+        </div>
+        <div class="tag col-6">
+          <p>#tag</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
